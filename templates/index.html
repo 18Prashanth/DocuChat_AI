@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>📄DOCUCHAT AI</title>
+    <link rel="stylesheet" href="../static/styles.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1>DOCUCHAT AI</h1>
+      <p>Upload documents and chat with AI intelligence</p>
+    </div>
+
+    <div class="container">
+      <div class="upload-section">
+        <div class="section-title">📄 Document Upload</div>
+
+        <div class="upload-zone" id="uploadZone">
+          <div class="upload-icon">📁</div>
+          <div class="upload-text">
+            Drop your document here or click to browse
+          </div>
+          <div class="upload-subtext">Supports PDF, DOC, DOCX, TXT files</div>
+          <input
+            type="file"
+            id="fileInput"
+            class="file-input"
+            accept=".pdf,.doc,.docx,.txt"
+          />
+        </div>
+
+        <div id="fileInfo" class="file-info" style="display: none">
+          <div id="fileName"></div>
+          <div id="fileSize"></div>
+        </div>
+
+        <button id="submitBtn" class="submit-btn" disabled>
+          Upload & Process Document
+        </button>
+
+        <div id="uploadStatus"></div>
+      </div>
+
+      <div class="chat-section">
+        <div class="section-title">💬 AI Chat</div>
+
+        <div class="chat-messages" id="chatMessages">
+          <div class="message assistant">
+            Welcome to DOCUCHAT AI! Upload a document first, then ask me
+            anything about it.
+          </div>
+        </div>
+
+        <div class="loading" id="chatLoading">
+          <div class="spinner"></div>
+          <span style="margin-left: 10px">AI is thinking...</span>
+        </div>
+
+        <div class="chat-input-container">
+          <input
+            type="text"
+            id="chatInput"
+            class="chat-input"
+            placeholder="Ask questions about your document..."
+            disabled
+          />
+          <button id="sendBtn" class="send-btn" disabled>➤</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="../static/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    ;
+  </body>
+</html>
